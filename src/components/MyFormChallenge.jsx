@@ -20,7 +20,7 @@ function MyForm() {
         {colors.map((col, index) => {
      
           return (<>
-            <li><BoxColor key={index} color={col} value={color} /></li>
+            <li key={index}><BoxColor key={index} color={col} value={color} /></li>
           </>)
         })}
       </ul>

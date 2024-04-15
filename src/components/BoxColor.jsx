@@ -5,7 +5,7 @@ function boxColor({ color, value }) {
 
   const boxCSS={
     color:color,
-    backgroundColor: color === value ? `${color}` : 'none'
+    backgroundColor: color == value ? `${color}` : null
   }
 
   useEffect(() => {
@@ -15,6 +15,7 @@ function boxColor({ color, value }) {
 
   return (
     <>
+    {console.log(classList)}
       <div ref={valueRef} className={`box ${color}`} style={boxCSS}>
         {color == value ? <p style={{ color: 'black' }}>Yes, I´m {value} color</p> : <p>I´m not a {value} color</p>}
       </div>
